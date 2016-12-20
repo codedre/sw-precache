@@ -78,7 +78,7 @@ self.addEventListener('install', function(event) {
             // If we don't have a key matching url in the cache already, add it.
             if (!cachedUrls.has(cacheKey)) {
               return cache.add(new Request(cacheKey, {
-                mode: 'no-cors',
+                mode: 'cors',
                 credentials: 'same-origin',
               }));
             }
